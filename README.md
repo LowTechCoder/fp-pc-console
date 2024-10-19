@@ -71,7 +71,7 @@ autologin-user=YOUR_USER.
 
 Set up "pause menu" for pcsx2 for the special home button on the controller.
 
-For Dolphin emulator, set up hotkeys for going fullscreen, saving and loading save states.
+For Dolphin emulator, since it doesn't have GUI gamepad support, I use a mouse, so be sure to set up hotkeys for going fullscreen, saving and loading save states.
 - fullscreen: Home + Y
 - quit or stop: Home + A
 - save slot 1: Home + L1
