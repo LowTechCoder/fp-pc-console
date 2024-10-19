@@ -1,5 +1,4 @@
-# fp-pc-console
-# fresh installation guide
+# Future Proof PC Console Installation
 
 ### Be sure to read the other guides named fp-pc-console-*
 
