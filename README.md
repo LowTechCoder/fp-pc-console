@@ -172,18 +172,27 @@ scummvm install with flatpak from flathub.org add scummvm games manually to emul
 
 
 System Rescue CD
+
 If you are having any efi/boot/grub issues, you can use System Rescue CD/DVD/USB to fix that.  I won't go into it in detail here, since it's in another doc.
 https://www.system-rescue.org/Download/
+~~~
 grub-install /dev/sdb
-
+~~~
 Gparted
+
 You can fix or expand partitions after you dd them into place, with gparted
 
 install amd drivers
+
 https://wiki.debian.org/AtiHowTo
+
 I never really found info on how to install Intel drivers, so I assume debian 12 just works, but if you run into issues on a fresh install, start with an intel machine first, and then do AMD.
 
 I think I only installed the first out of all these, but here is the list anyway.
 ~~~
 apt-get install firmware-amd-graphics libgl1-mesa-dri libglx-mesa0 mesa-vulkan-drivers xserver-xorg-video-all
 ~~~
+
+```
+test
+```
