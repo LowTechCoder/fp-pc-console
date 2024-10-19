@@ -72,12 +72,12 @@ autologin-user=YOUR_USER.
 Set up "pause menu" for pcsx2 for the special home button on the controller.
 
 For Dolphin emulator, set up hotkeys for going fullscreen, saving and loading save states.
--- fullscreen: Home + Y
--- quit or stop: Home + A
--- save slot 1: Home + L1
--- save slot 2: Home + L2
--- load slot 1: Home + R1
--- load slot 2: Home + R2
+- fullscreen: Home + Y
+- quit or stop: Home + A
+- save slot 1: Home + L1
+- save slot 2: Home + L2
+- load slot 1: Home + R1
+- load slot 2: Home + R2
 
 For xfce, to auto run pcsx2, add this to the auto run in settings:
 
