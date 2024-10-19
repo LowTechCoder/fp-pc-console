@@ -30,11 +30,12 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 sudo shutdown -r now (or maybe restart with xfce and save session if you need)
 ~~~
 
-while installing flatpaks, if you see a red slash instead of a green checkmark, I would totally remove 
+While installing flatpaks, if you see a red slash instead of a green checkmark, I would totally remove 
 that package, and then reinstall it.  Example:
+~~~
 flatpak list
 flatpak uninstall net.pcsx2.PCSX2
-
+~~~
 
 Install your software from flatpak.  Each second command is just the command on how to run it in terminal.
 ~~~
@@ -56,7 +57,7 @@ flatpak run com.github.tchx84.Flatseal
 
 Use the wired 8bitDo controller that was meant for xbox or the 8bitDo xbox controllers.
 
-Use Flatseal to "all user files" for each emulator you need.
+Use Flatseal to allow each emulator to see the home directory by choosing "all user files" for each emulator you need.
 Then add the games to a folder in the home directory.
 
 Set up auto login with xfce:
@@ -71,27 +72,34 @@ autologin-user=YOUR_USER.
 Set up "pause menu" for pcsx2 for the special home button on the controller.
 
 For Dolphin emulator, set up hotkeys for going fullscreen, saving and loading save states.
-fullscreen: Home + Y
-Quit or Stop: Home + A
-save slot 1: Home + L1
-save slot 2: Home + L2
-load slot 1: Home + R1
-load slot 2: Home + R2
+-- fullscreen: Home + Y
+-- quit or stop: Home + A
+-- save slot 1: Home + L1
+-- save slot 2: Home + L2
+-- load slot 1: Home + R1
+-- load slot 2: Home + R2
 
 For xfce, to auto run pcsx2, add this to the auto run in settings:
-session & startup > application autostart
-flatpak run net.pcsx2.PCSX2 -bigpicture -fullscreen
+
 I don't usually do this anymore, but good to know.  I normally auto run the flex-launcher.
 
-add your games to:
+session & startup > application autostart
+~~~
+flatpak run net.pcsx2.PCSX2 -bigpicture -fullscreen
+~~~
+
+
+Add your games to:
 /home/matt/Games/
 
 Set power settings to off and set to shutdown on power press, 
 in xfce Settings > Power Manager
 
 Install Flex Launcher
+
 You may want to skip downloading the flex-launcher with wget, and just use the one in the
 home folder, if you are copying the /home directory from a backup. 
+
 When installing the flex-launcher, ignore the warnings or errors.  It's fine.
 If you are copying a home directory, and you do some of these steps, you'll erase the config.
 ~~~
@@ -102,18 +110,17 @@ cp -r /usr/share/flex-launcher ~/.config
 sed -i "s|/usr/share/flex-launcher|$HOME/.config/flex-launcher|g" ~/.config/flex-launcher/config.ini
 ~~~
 
-to edit flex-launcher menu:
+To edit flex-launcher menu (may not need to do this if copying existing /home directory):
 ~~~
 vim .config/flex-launcher/config.ini
 ~~~
 
-this is how you add pico to the flex-launcher:
+This is how you add pico to the flex-launcher(may not need to do this if copying existing /home directory):
 ~~~
 x-terminal-emulator -e Games/pico-8/pico8 -splore
 ~~~
 
-pico wasn't autostarting, so the solution was to add terminal to the 
-flex-launcher by editing the autostart file here.
+Pico wasn't autostarting, so the solution was to add terminal to the flex-launcher by editing the autostart file here.
 ~~~
 /home/matt/.config/autostart/
 ~~~
@@ -143,6 +150,7 @@ Entry3=Quit Launcher;/home/matt/.config/flex-launcher/assets/icons/sleep.png;:qu
 
 
 You also have to enable Gamepad support in the flex-launch config file:
+
 /home/matt/.config/flex-launcher/config.ini
 ~~~
 [Gamepad]
@@ -158,7 +166,7 @@ flex-launcher libsdl2-image-2.0-0 libsdl2-ttf-2.0-0
 
 
 
-This Scummvm info, wasn't nessisary, for some reason.  Maybe this is just raspberry pi info, so probably skip this step.
+This Scummvm info, wasn't needed, for some reason.  Maybe this is just raspberry pi info, so probably skip this step.
 scummvm install with flatpak from flathub.org add scummvm games manually to emulation station by adding an empty file inside of each game. Example: comi.scummvm for curso of monkey island. https://www.scummvm.org/compatibility
 
 
