@@ -2,10 +2,11 @@
 
 ### Be sure to read the other guides named fp-pc-console-*
 
+I usually like the normal Debian 12 install DVD/USB more than the Live version.  But it does have some small differences.  The most notable is how on the efi partition, you would select /boot/efi on the Live Debian, and on the normal Debian Installer, you can just choose fat32 and efi for that partition.  I'm going on memory so maybe some of this info is slightly off, but it's not hard to see what to pick.
 
 Skip the root user at OS install
 
-Choose manual disk install
+Choose manual disk/partition install when it's scanning partitions.
 
 about 500mb of free space (just a little extra space, just in case)
 
