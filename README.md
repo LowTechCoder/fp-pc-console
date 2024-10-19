@@ -1,6 +1,9 @@
 # fp-pc-console
 # fresh installation guide
 
+### Be sure to read the other guides named fp-pc-console-*
+
+
 Skip the root user at OS install
 
 Choose manual disk install
@@ -193,6 +196,4 @@ I think I only installed the first out of all these, but here is the list anyway
 apt-get install firmware-amd-graphics libgl1-mesa-dri libglx-mesa0 mesa-vulkan-drivers xserver-xorg-video-all
 ~~~
 
-```
-test
-```
+### Be sure to read the other guides named fp-pc-console-*
